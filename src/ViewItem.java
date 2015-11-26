@@ -57,12 +57,11 @@ public class ViewItem {
 		FirstStore(User,ID);
 
 		Label CurQty = new Label("Current Quantity:");
-//		Label UsedQty = new Label("Quantity Used:");
+
 		
 		CurQty.setLayoutX(40);
 		CurQty.setLayoutY(190);
-//		UsedQty.setLayoutX(40);
-//		UsedQty.setLayoutY(180);
+
 		
 		ViewPane.getChildren().addAll(CatView,CurQty);
 		Qty = new Label();
@@ -105,20 +104,6 @@ public class ViewItem {
 			e1.printStackTrace();
 		}
 		
-//		FileReader in = new FileReader(User+".txt");
-//		BufferedReader input = new BufferedReader(in);
-//		while((check = input.readLine())!= null){
-//			
-//			if(check.substring(0,4).equals("CAT:")){
-//				if((check.contains("ITEM")) == false && (check.contains("SUB:")) == false){
-//					check = check.substring(5,check.length());
-//					Observe.add(check);
-//					
-//				}
-//				
-//				
-//			}
-//		}
 		
 		
 		  CatView.getSelectionModel().selectedItemProperty().addListener(
@@ -177,23 +162,7 @@ public class ViewItem {
 			System.out.println("Didnt connect");
 			e1.printStackTrace();
 		}
-		
-//		FileReader in = new FileReader(User+".txt");
-//		BufferedReader input = new BufferedReader(in);
-//		while((check = input.readLine())!= null){
-//			
-//			if(check.substring(0,4).equals("CAT:")){
-//				if((check.contains("ITEM")) == false && (check.contains("SUB:")) == true && (check.contains(CAT) == true)){
-//					int id = check.lastIndexOf("SUB:");
-//					check = check.substring(id+5,check.length());
-//					Observe.add(check);
-//					
-//				}
-//				
-//				
-//			}
-//		}
-//		SubCatView.setItems(Observe);
+
 		
 		if(Observe.isEmpty() == true){
 			ViewPane.getChildren().add(SubCatView);
@@ -274,38 +243,6 @@ public class ViewItem {
 		
 		
 		
-//		FileReader in = new FileReader(User+".txt");
-//		BufferedReader input = new BufferedReader(in);
-//		
-//		while((check = input.readLine())!= null){
-//			
-//			if(check.substring(0,4).equals("CAT:")){
-//				if( (check.contains("ITEM") == true) && (check.contains(CAT) == true) && (check.contains("SUB") == true)    ){
-//					int id = check.lastIndexOf("ITEM:");
-//					int id2 = check.lastIndexOf("QTY");
-//					qty = check.substring(id2+5,check.length());
-//					check = check.substring(id+6,id2-1);
-//					qty = qty + " " + check;
-//					IHoldU.add(qty);
-//					Observe.add(check);
-//				}
-//				
-//				if((check.contains("ITEM")) == true && (check.contains("SUB:")) == false && (check.contains(CAT) == true)){
-//					int id = check.lastIndexOf("ITEM:");
-//					int id2 = check.lastIndexOf("QTY");
-//					qty = check.substring(id2+5,check.length());
-//					check = check.substring(id+6,id2-1);
-//					qty = qty + " " + check;
-//					IHoldU.add(qty);
-//					Observe.add(check);
-//					
-//				}
-//				
-//				
-//			}
-//		}
-		
-//		ItemView.setItems(Observe);
 		
 		
 		ItemView.getSelectionModel().selectedItemProperty().addListener(
@@ -331,15 +268,7 @@ public class ViewItem {
 						Qty.setLayoutY(190);
 						Qty.setText(Integer.toString(qtyID));
 						
-						
-//							for(int i = 0; i < IHoldU.size(); i++){
-//								if(IHoldU.get(i).toString().contains(new_val) == true){
-//									int id = IHoldU.get(i).toString().indexOf(" ");
-//									Qty.setText(IHoldU.get(i).toString().substring(0, id));
-
-//									break;
-//								}
-//							}						
+											
 					}
 	        });
 		

@@ -40,9 +40,7 @@ public class Main extends Application{
 		
 		MM = PrimaryStage;
 		MM.setTitle("Launch");
-		
-//		FileReader file = new FileReader("Users.txt");
-//		BufferedReader checker = new BufferedReader(file);
+
 		
 		Pane layout1 = new Pane();
 		
@@ -84,34 +82,9 @@ public class Main extends Application{
 			
 			
 			
-//			try {
-//				while((check = checker.readLine()) != null){
-//					if(check.equals(text.getText())){
-//						usertrue = true;
-//					}
-//				}
-//			} catch (Exception e1) {
-//				e1.printStackTrace();
-//			}
+
 			if(usertrue == true){
-//				try {
-////					FileReader passfile = new FileReader(text.getText()+".txt");
-////					BufferedReader passcheck = new BufferedReader(passfile);
-////					while((check = passcheck.readLine()) != null){
-////						if(check.equals(password.getText())){
-//////							Menu.MainMenu(text.getText());
-////							
-////							MM.setScene(Menu.Menu);
-////							return;
-////						}else{
-////							layout1.getChildren().add(incpass);
-////							incpass.setLayoutX(100);
-////							incpass.setLayoutY(170);
-////						}
-////					}
-//				} catch (Exception e1) {
-//					e1.printStackTrace();
-//				}
+
 			}
 		                         });
 		

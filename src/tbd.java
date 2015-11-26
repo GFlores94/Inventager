@@ -111,37 +111,7 @@ public class tbd {
 				e2.printStackTrace();
 			}
 			
-//			try {
-//				FileReader in =  new FileReader(User+".txt");;
-//				BufferedReader input = new BufferedReader(in);
-//				while((check = input.readLine()) != null){
-//					if(check.contains(CatField.getText()) == true){
-//						AddPane.getChildren().add(DupEnt);
-//						return;
-//					}
-//				}
-//				PrintWriter write = new PrintWriter(new FileWriter(User+".txt", true));
-//				write.println("CAT: " + CatField.getText());
-//				write.close();
-//				
-//				FileReader in2 = new FileReader(User+".txt");
-//				BufferedReader input2 = new BufferedReader(in2);
-//				while((check = input.readLine())!= null){
-//					if(check.substring(0,4).equals("CAT:")){
-//						if((check.contains("ITEM")) == false && (check.contains("SUB:")) == false){
-//							check = check.substring(5,check.length());
-//							SubList.add(check);
-//						}
-//					}
-//				}
-//				SecondList.setItems(null);
-//				SecondList.setItems(SubList);
-//				
-//				AddPane.getChildren().add(Added);
-//				
-//			} catch (Exception e1) {
-//				e1.printStackTrace();
-//			}
+
 		});
 		
 		SubBut.setOnAction(e -> {
@@ -177,9 +147,7 @@ public class tbd {
 						pst.close();
 						AddPane.getChildren().add(Added);
 					}catch(Exception e1){
-//						AddPane.getChildren().add(NotInt);
-//						NotInt.setLayoutX(160);
-//						NotInt.setLayoutY(180);
+
 					}
 					
 				}
@@ -188,21 +156,7 @@ public class tbd {
 			}
 			
 			
-//			try {
-//				FileReader in = new FileReader(User+".txt");
-//				BufferedReader input = new BufferedReader(in);
-//				while((check = input.readLine()) != null){
-//					if( check.contains(Holder) == true && (check.contains(SubField.getText()) == true) ){
-//						return;
-//					}
-//				}
-//				PrintWriter write = new PrintWriter(new FileWriter(User+".txt",true));
-//				write.println("CAT: " + Holder + " SUB: " + SubField.getText());
-//				write.close();
 
-//			} catch (Exception e1) {
-//				e1.printStackTrace();
-//			}
 			
 		});
 		
@@ -249,23 +203,7 @@ public class tbd {
 				NotInt.setLayoutY(180);
 			}
 			
-//			try {
-//				FileReader in = new FileReader(User+".txt");
-//				BufferedReader input = new BufferedReader(in);
-//				while((check = input.readLine()) != null){
-//					if( check.contains(Holder) == true && check.contains(SubHolder) == true && check.contains(ItemField.getText()) == true){
-//						AddPane.getChildren().add(DupEnt);
-//						return;
-//					}
-//				}
-//				PrintWriter write = new PrintWriter(new FileWriter(User+".txt",true));
-//				write.println("CAT: " + Holder + " SUB: " + SubHolder + " ITEM: " + ItemField.getText() + " QTY: " + ItemQtyField.getText());
-//				write.close();
-//				AddPane.getChildren().add(Added);
-//				
-//			} catch (Exception e1) {
-//				e1.printStackTrace();
-//			}
+
 		});
 		
 	}
@@ -314,27 +252,7 @@ public class tbd {
 								AddPane.getChildren().removeAll(FirstList,Added);
 								ToSub = true;
 								
-//								try {
-//									SubList.clear();
-//									FileReader in2 = new FileReader(User+".txt");
-//									BufferedReader input2 = new BufferedReader(in2);
-//									while((check = input2.readLine())!= null){
-//										if(check.substring(0,4).equals("CAT:")){
-//											if((check.contains("ITEM")) == false && (check.contains("SUB:")) == false){
-//												check = check.substring(5,check.length());
-//												SubList.add(check);
-//											}
-//										}
-//									}
-//									
-//									SecondList.setItems(null);
-//									SecondList.setItems(SubList);
-//									
-//									
-//									
-//								} catch (Exception e1) {
-//									e1.printStackTrace();
-//								}
+
 								
 								Subs(User);
 							} catch (IOException e) {
@@ -573,17 +491,7 @@ public class tbd {
 		
 		
 		
-//		FileReader in = new FileReader(User+".txt");
-//		BufferedReader input = new BufferedReader(in);
-//		while((check = input.readLine())!= null){
-//			if(check.substring(0,4).equals("CAT:")){
-//				if((check.contains("ITEM")) == false && (check.contains("SUB:")) == false){
-//					check = check.substring(5,check.length());
-//					SubList.add(check);
-//				}
-//			}
-//		}
-//		SecondList.setItems(SubList);
+
 		
 		String query = "select * from Category";
 		try {
@@ -603,28 +511,6 @@ public class tbd {
 		FirstTime = false;
 	}
 	
-//	public static void Refresh(String User,String CAT) throws IOException{
-//		
-//		SubsList = FXCollections.observableArrayList();
-//		
-//		FileReader in = new FileReader(User+".txt");
-//		BufferedReader input = new BufferedReader(in);
-//		while((check = input.readLine())!= null){
-//			
-//			if(check.substring(0,4).equals("CAT:")){
-//				if((check.contains("ITEM")) == false && (check.contains("SUB:")) == true && (check.contains(CAT) == true)){
-//					int id = check.lastIndexOf("SUB:");
-//					check = check.substring(id+5,check.length());
-//					SubsList.add(check);
-//					
-//					
-//				}
-//				
-//				
-//			}
-//		}
-//		
-//		SecondList.setItems(SubList);
-//	}
+
 	
 }

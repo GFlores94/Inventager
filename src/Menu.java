@@ -121,16 +121,7 @@ public class Menu{
 		ObservableList AddedCat = FXCollections.observableArrayList();
 		ObservableList AddedSub = FXCollections.observableArrayList();
 		
-//		FileReader in = new FileReader(User+".txt");
-//		BufferedReader input = new BufferedReader(in);
-//		while((check = input.readLine())!= null){		
-//			if(check.substring(0,4).equals("CAT:")){
-//				if((check.contains("ITEM")) == false && (check.contains("SUB:")) == false){
-//					check = check.substring(5,check.length());
-//					AddedCat.add(check);
-//				}
-//			}
-//		}
+
 		
 
 		
@@ -156,14 +147,7 @@ public class Menu{
 		
 		AddPane.getChildren().add(AddView);
 		
-		
-//		Button AddCat = new Button();
-//		AddCat.setText("Add Category");
-//		Button AddSubCat = new Button();
-//		AddSubCat.setText("Add Sub-Category");
-//		Button AddItems = new Button();
-//		AddItems.setText("Add Item");
-		
+
 		
 		
 		CatField.setMaxWidth(100);		
@@ -191,23 +175,7 @@ public class Menu{
 							Add2.setLayoutX(200);
 							Add2.setLayoutY(130);
 						}else{
-//							try {
-//								AddedSub.clear();
-//								FileReader in = new FileReader(User+".txt");
-//								BufferedReader input = new BufferedReader(in);
-//								while((check = input.readLine())!= null){
-//									
-//									if(check.substring(0,4).equals("CAT:")){
-//										if((check.contains("ITEM")) == false && (check.contains("SUB:")) == true && (check.contains(new_val) == true)){
-//											int id = check.lastIndexOf("SUB:");
-//											check = check.substring(id+5,check.length());
-//											AddedSub.add(check);		
-//										}
-//									}
-//								}
-//							} catch (IOException e) {
-//								e.printStackTrace();
-//							}
+
 							PickedCat = new_val;
 							
 							SubView.setItems(AddedSub);
@@ -297,42 +265,13 @@ public class Menu{
 				NoSubCatVal.setLayoutY(160);
 			}else{
 				AddPane.getChildren().removeAll(NoSubCatVal,Added,NullSel,DupSub);
-//				try {
-//					FileReader in2 = new FileReader(User+".txt");
-//					BufferedReader input2 = new BufferedReader(in2);
-//					while((check = input2.readLine()) != null){
-//						boolean checker = check.contains(SubCatText.getText());
-//						if(checker == true){
-//							AddPane.getChildren().add(DupSub);
-//							DupSub.setLayoutX(200);
-//							DupSub.setLayoutY(160);
-//							return;
-//						}
-//					}
-//					check = catselect;
-//					PrintWriter write = new PrintWriter(new FileWriter(User+".txt",true));
-//					write.println("CAT: "+check+" SUB: "+SubCatText.getText());
-//					write.close();
-//					AddPane.getChildren().add(Added);
-//					Added.setLayoutX(200);
-//					Added.setLayoutY(160);
-//				} catch (Exception e1) {
-//					e1.printStackTrace();
-//				}
+
 			}
 			
 		});
 		
 		
-//		AddItems.setOnAction(e -> {
-//			AddPane.getChildren().removeAll(SelCat,Categories,SubCatLabel,SubCatText,Add2,DupSub,Add,WhichCat,CatField,ChoSub,Sub_Categories,Added,ToAdd,AddField,Add3);
-//			AddPane.getChildren().addAll(SelCat,Categories);
-//			SelCat.setLayoutX(20);
-//			SelCat.setLayoutY(70);
-//			Categories.setLayoutX(120);
-//			Categories.setLayoutY(70);
-//			MouseClick(User);
-//		});
+
 		
 		
 	}

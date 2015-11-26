@@ -39,10 +39,8 @@ public class PopUp extends IOException{
 	
 	public static void NewAcc() throws IOException{
 		
-		Connection conn2 = SQLConnect.ObjectConnect();
+		Connection conn2 = SQLConnect.dbConnect();
 		
-//		FileReader in = new FileReader("Users.txt");
-//		BufferedReader reader = new BufferedReader(in);
 		
 		Button Create = new Button();
 		Create.setText("Done");
@@ -158,60 +156,7 @@ public class PopUp extends IOException{
 				System.out.println("Did not work");
 			}
 		});
-		
-//		Create.setOnAction(e -> {
-//			if(Pass.getText().equals(Repass.getText()) && Pass.getText().length() >= 5){
-//				layout.getChildren().remove(duplicate);
-//				layout.getChildren().remove(created);
-//				layout.getChildren().add(created);
-//				created.setLayoutX(130);
-//				created.setLayoutY(250);
-//				layout.getChildren().remove(mismatch);
-//				layout.getChildren().remove(shortpass);
-//				try {
-//					PrintWriter writeuser = new PrintWriter(new FileWriter("Users.txt",true));
-//					FileReader FR = new FileReader("Users.txt");
-//					BufferedReader reading = new BufferedReader(FR);
-//					while((check = reading.readLine()) != null){
-//						if(User.getText().equals(check)){
-//							layout.getChildren().remove(created);
-//							layout.getChildren().add(duplicate);
-//							duplicate.setLayoutX(130);
-//							duplicate.setLayoutY(250);
-//							return;	
-//						}
-//					}
-//					
-//					writeuser.println(User.getText());
-//					writeuser.close();
-//					PrintWriter write = new PrintWriter(new FileWriter(User.getText()+".txt",true));
-//					FileReader open = new FileReader(User.getText()+".txt");
-//					write.println(Pass.getText());
-//					write.close();
-//				} catch (Exception e1) {
-//					e1.printStackTrace();
-//					
-//					
-//				}
-//			}else if(!Pass.getText().equals(Repass.getText())){
-//				layout.getChildren().remove(duplicate);
-//				layout.getChildren().remove(mismatch);
-//				layout.getChildren().add(mismatch);
-//				mismatch.setLayoutX(130);
-//				mismatch.setLayoutY(250);
-//				layout.getChildren().remove(shortpass);
-//				layout.getChildren().remove(created);
-//			}else if(Pass.getText().length() < 5){
-//				layout.getChildren().remove(duplicate);
-//				layout.getChildren().remove(shortpass);
-//				layout.getChildren().add(shortpass);
-//				shortpass.setLayoutX(50);
-//				shortpass.setLayoutY(250);
-//				layout.getChildren().remove(mismatch);
-//				layout.getChildren().remove(created);
-//			}
-//		});
-		
+
 		Scene scene1 = new Scene(layout,300,300);
 		NewAcc.setScene(scene1);
 		NewAcc.show();
@@ -255,33 +200,7 @@ public class PopUp extends IOException{
 					e1.printStackTrace();
 				}
 				
-//				try {
-////					FileReader in = new FileReader(User+".txt");
-////					BufferedReader inputvar = new BufferedReader(in);
-////					PrintWriter tempwrite = new PrintWriter(new FileWriter("TempFile.txt"));
-//					while((check = inputvar.readLine()) != null){
-//						int id = check.indexOf(input);
-//						int id2 = check.indexOf(type);
-//						if((id - id2) == 5){
-//						}else{
-//							tempwrite.println(check);
-//						}
-//					}
-//					tempwrite.close();
-//					in = new FileReader("TempFile.txt");
-//					inputvar = new BufferedReader(in);
-//					PrintWriter tempwrite2 = new PrintWriter(new FileWriter("TempFile.txt",true));
-//					PrintWriter og = new PrintWriter(new FileWriter(User+".txt"));
-//					while((check = inputvar.readLine()) != null){
-//						og.println(check);
-//					}
-//					tempwrite.close();
-//					og.close();
-//					Confirm.close();
-//					DeleteItem.Refresh(User, input, true, false, false);
-//				} catch (Exception e1) {
-//					e1.printStackTrace();
-//				}
+
 			}
 			
 			if(type.equals("SUB")){
@@ -297,33 +216,7 @@ public class PopUp extends IOException{
 					e1.printStackTrace();
 				}
 				
-//				try {
-//					FileReader in = new FileReader(User+".txt");
-//					BufferedReader inputvar = new BufferedReader(in);
-//					PrintWriter tempwrite = new PrintWriter(new FileWriter("TempFile.txt"));
-//					while((check = inputvar.readLine()) != null){
-//						int id = check.indexOf(input);
-//						int id2 = check.indexOf(type);
-//						if((id - id2) == 5){
-//						}else{
-//							tempwrite.println(check);
-//						}
-//					}
-//					tempwrite.close();
-//					in = new FileReader("TempFile.txt");
-//					inputvar = new BufferedReader(in);
-//					PrintWriter tempwrite2 = new PrintWriter(new FileWriter("TempFile.txt",true));
-//					PrintWriter og = new PrintWriter(new FileWriter(User+".txt"));
-//					while((check = inputvar.readLine()) != null){
-//						og.println(check);
-//					}
-//					tempwrite.close();
-//					og.close();
-//					Confirm.close();
-//					DeleteItem.Refresh(User, CAT, false, true, false);
-//				} catch (Exception e1) {
-//					e1.printStackTrace();
-//				}
+
 			}
 			
 			if(type.equals("ITEM")){
@@ -339,33 +232,7 @@ public class PopUp extends IOException{
 					e1.printStackTrace();
 				}
 				
-//				try {
-//					FileReader in = new FileReader(User+".txt");
-//					BufferedReader inputvar = new BufferedReader(in);
-//					PrintWriter tempwrite = new PrintWriter(new FileWriter("TempFile.txt"));
-//					while((check = inputvar.readLine()) != null){
-//						int id = check.indexOf(input);
-//						int id2 = check.indexOf(type);
-//						if((id - id2) == 6){
-//						}else{
-//							tempwrite.println(check);
-//						}
-//					}
-//					tempwrite.close();
-//					in = new FileReader("TempFile.txt");
-//					inputvar = new BufferedReader(in);
-//					PrintWriter tempwrite2 = new PrintWriter(new FileWriter("TempFile.txt",true));
-//					PrintWriter og = new PrintWriter(new FileWriter(User+".txt"));
-//					while((check = inputvar.readLine()) != null){
-//						og.println(check);
-//					}
-//					tempwrite.close();
-//					og.close();
-//					Confirm.close();
-//					DeleteItem.Refresh(User, CAT, false, false, true);
-//				} catch (Exception e1) {
-//					e1.printStackTrace();
-//				}
+
 			}
 		});
 		

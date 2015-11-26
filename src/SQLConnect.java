@@ -29,22 +29,6 @@ public class SQLConnect {
 		}
 	}
 	
-//	public static Connection ObjectConnect(){
-//		try{
-//			Class.forName("org.sqlite.JDBC");
-//			Connection Conn2 = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\Gustavo\\workspace\\Inventory\\Objects.db");
-//			return Conn2;
-//		}catch(Exception e){
-//			Stage PopUp = new Stage();
-//			Pane Err = new Pane();
-//			Scene ErrScene = new Scene(Err,200,100);
-//			Err.getChildren().add(ConnectFail);
-//			ConnectFail.setLayoutX(100);
-//			ConnectFail.setLayoutY(20);
-//			PopUp.setScene(ErrScene);
-//			PopUp.show();
-//			return null;
-//		}
-//	}
+
 	
 }

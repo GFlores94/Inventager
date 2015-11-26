@@ -105,20 +105,7 @@ public class DeleteItem {
 			e1.printStackTrace();
 		}
 		
-//		FileReader in = new FileReader(User+".txt");
-//		BufferedReader input = new BufferedReader(in);
-//		while((check = input.readLine())!= null){
-//			
-//			if(check.substring(0,4).equals("CAT:")){
-//				if((check.contains("ITEM")) == false && (check.contains("SUB:")) == false){
-//					check = check.substring(5,check.length());
-//					Observe.add(check);
-//					
-//				}
-//				
-//				
-//			}
-//		}
+
 		CatView.setItems(Observe);
 		DelPane.getChildren().add(CatView);
 		
@@ -183,25 +170,7 @@ public class DeleteItem {
 			e1.printStackTrace();
 		}
 		
-//		FileReader in = new FileReader(User+".txt");
-//		BufferedReader input = new BufferedReader(in);
-//		while((check = input.readLine())!= null){
-//			try{
-//				
-//				if(check.substring(0,4).equals("CAT:")){
-//					if((check.contains("ITEM")) == false && (check.contains("SUB:")) == true && (check.contains(CAT) == true)){
-//						int id = check.lastIndexOf("SUB:");
-//						check = check.substring(id+5,check.length());
-//						Observe.add(check);
-//						
-//					}
-//					
-//					
-//				}
-//			}catch(Exception e){
-//				
-//			}
-//		}
+
 		SubCatView.setItems(Observe);
 		
 		if(Observe.isEmpty() == true){
@@ -284,42 +253,7 @@ public class DeleteItem {
 		}
 		
 		ObservableList IHoldU = FXCollections.observableArrayList();
-		
-//		FileReader in = new FileReader(User+".txt");
-//		BufferedReader input = new BufferedReader(in);
-//		
-//		while((check = input.readLine())!= null){
-//			try{
-//				
-//				if(check.substring(0,4).equals("CAT:")){
-//					if( (check.contains("ITEM") == true) && (check.contains(CAT) == true) && (check.contains("SUB") == true)    ){
-//						int id = check.lastIndexOf("ITEM:");
-//						int id2 = check.lastIndexOf("QTY");
-//						qty = check.substring(id2+5,check.length());
-//						
-//						check = check.substring(id+6,id2-1);
-//						qty = qty + " " + check;
-//						IHoldU.add(qty);
-//						Observe.add(check);
-//					}
-//					
-//					if((check.contains("ITEM")) == true && (check.contains("SUB:")) == false && (check.contains(CAT) == true)){
-//						int id = check.lastIndexOf("ITEM:");
-//						int id2 = check.lastIndexOf("QTY");
-//						qty = check.substring(id2+5,check.length());
-//						check = check.substring(id+6,id2-1);
-//						qty = qty + " " + check;
-//						IHoldU.add(qty);
-//						Observe.add(check);
-//						
-//					}
-//					
-//					
-//				}
-//			}catch(Exception e){
-//				
-//			}
-//		}
+
 		
 		ItemView.setItems(Observe);
 		
@@ -374,20 +308,7 @@ public class DeleteItem {
 						EditItem.setOnAction(e -> {
 							EditMenu(User,new_val);
 						});
-//						try{
-//							for(int i = 0; i < IHoldU.size(); i++){
-//								if(IHoldU.get(i).toString().contains(new_val) == true){
-//									int id = IHoldU.get(i).toString().indexOf(" ");
-//									Qty.setText(IHoldU.get(i).toString().substring(0, id));
-//									Qty.setLayoutX(100);
-//									Qty.setLayoutY(220);
-//									break;
-//								}
-//							}						
-//							
-//						}catch(Exception e){
-//							
-//						}
+
 					}
 	        });
 		
@@ -447,37 +368,7 @@ public class DeleteItem {
 					pst.close();
 					
 					EditPane.getChildren().removeAll(EmpField,Done,NotInt);
-//					int i = Integer.parseInt(NewQty.getText());
-//					int j = Integer.parseInt(qty);
-//					int sum = i + j;
-//					qty = Integer.toString(sum);
-//					try {
-//						FileReader in = new FileReader(User+".txt");
-//						BufferedReader inputvar = new BufferedReader(in);
-//						PrintWriter tempwrite = new PrintWriter(new FileWriter("TempFile.txt"));
-//						while((check = inputvar.readLine()) != null){
-//							int id = check.indexOf(item);
-//							int id2 = check.indexOf("QTY");
-//							if(check.contains(item) == true){
-//								check = check.substring(0, id2) + "QTY: " + sum;
-//								tempwrite.println(check);
-//							}else{
-//								tempwrite.println(check);
-//							}
-//						}
-//						tempwrite.close();
-//						in = new FileReader("TempFile.txt");
-//						inputvar = new BufferedReader(in);
-//						PrintWriter tempwrite2 = new PrintWriter(new FileWriter("TempFile.txt",true));
-//						PrintWriter og = new PrintWriter(new FileWriter(User+".txt"));
-//						while((check = inputvar.readLine()) != null){
-//							og.println(check);
-//						}
-//						tempwrite.close();
-//						og.close();
-//					} catch (Exception e1) {
-//						e1.printStackTrace();
-//					}
+
 					EditPane.getChildren().add(Done);
 				}catch(Exception es){
 					EditPane.getChildren().removeAll(NotInt,Done,EmpField);
@@ -500,38 +391,7 @@ public class DeleteItem {
 					pst.executeUpdate();
 					pst.close();
 					
-//					int i = Integer.parseInt(NewQty.getText());
-//					int j = Integer.parseInt(qty);
-//					int sum = j - i;
-//					
-					
-//					try {
-//						FileReader in = new FileReader(User+".txt");
-//						BufferedReader inputvar = new BufferedReader(in);
-//						PrintWriter tempwrite = new PrintWriter(new FileWriter("TempFile.txt"));
-//						while((check = inputvar.readLine()) != null){
-//							int id = check.indexOf(item);
-//							int id2 = check.indexOf("QTY");
-//							if(check.contains(item) == true){
-//								check = check.substring(0, id2) + "QTY: " + sum;
-//								tempwrite.println(check);
-//							}else{
-//								tempwrite.println(check);
-//							}
-//						}
-//						tempwrite.close();
-//						in = new FileReader("TempFile.txt");
-//						inputvar = new BufferedReader(in);
-//						PrintWriter tempwrite2 = new PrintWriter(new FileWriter("TempFile.txt",true));
-//						PrintWriter og = new PrintWriter(new FileWriter(User+".txt"));
-//						while((check = inputvar.readLine()) != null){
-//							og.println(check);
-//						}
-//						tempwrite.close();
-//						og.close();
-//					} catch (Exception e1) {
-//						e1.printStackTrace();
-//					}
+
 					EditPane.getChildren().add(Done);
 				}catch(Exception es){
 					EditPane.getChildren().removeAll(NotInt,Done,EmpField);
@@ -594,20 +454,7 @@ public class DeleteItem {
 				e1.printStackTrace();
 			}
 			
-//			FileReader in = new FileReader(User+".txt");
-//			BufferedReader input = new BufferedReader(in);
-//			while((check = input.readLine())!= null){
-//				
-//				if(check.substring(0,4).equals("CAT:")){
-//					if((check.contains("ITEM")) == false && (check.contains("SUB:")) == false){
-//						check = check.substring(5,check.length());
-//						Observe.add(check);
-//						
-//					}
-//					
-//					
-//				}
-//			}
+
 			CatView.setItems(null);
 			CatView.setItems(Observe);
 			
@@ -631,21 +478,7 @@ public class DeleteItem {
 				e1.printStackTrace();
 			}
 			
-//			FileReader in2 = new FileReader(User+".txt");
-//			BufferedReader input2 = new BufferedReader(in2);
-//			while((check = input2.readLine())!= null){
-//				
-//				if(check.substring(0,4).equals("CAT:")){
-//					if((check.contains("ITEM")) == false && (check.contains("SUB:")) == true && (check.contains(CAT) == true)){
-//						int id = check.lastIndexOf("SUB:");
-//						check = check.substring(id+5,check.length());
-//						Observe2.add(check);
-//						
-//					}
-//					
-//					
-//				}
-//			}
+
 			SubCatView.setItems(null);
 			SubCatView.setItems(Observe2);
 			
@@ -672,37 +505,7 @@ public class DeleteItem {
 				System.out.println("Didnt connect");
 				e1.printStackTrace();
 			}
-//			FileReader in3 = new FileReader(User+".txt");
-//			BufferedReader input3 = new BufferedReader(in3);
-//			
-//			while((check = input3.readLine())!= null){
-//				
-//				if(check.substring(0,4).equals("CAT:")){
-//					if( (check.contains("ITEM") == true) && (check.contains(CAT) == true) && (check.contains("SUB") == true)    ){
-//						int id = check.lastIndexOf("ITEM:");
-//						int id2 = check.lastIndexOf("QTY");
-//						qty = check.substring(id2+5,check.length());
-//						
-//						check = check.substring(id+6,id2-1);
-//						qty = qty + " " + check;
-//						
-//						IHoldU.add(check);
-//					}
-//					
-//					if((check.contains("ITEM")) == true && (check.contains("SUB:")) == false && (check.contains(CAT) == true)){
-//						int id = check.lastIndexOf("ITEM:");
-//						int id2 = check.lastIndexOf("QTY");
-//						qty = check.substring(id2+5,check.length());
-//						check = check.substring(id+6,id2-1);
-//						qty = qty + " " + check;
-//						
-//						IHoldU.add(check);
-//						
-//					}
-//					
-//					
-//				}
-//			}
+
 			ItemView.setItems(null);
 			ItemView.setItems(Observe3);
 			
